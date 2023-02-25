@@ -37,6 +37,13 @@ return require("packer").startup(function(use)
     -- Snippets
     {'L3MON4D3/LuaSnip'},             -- Required
     {'rafamadriz/friendly-snippets'}, -- Optional
+    }
   }
-}
+
+  use {
+    "nvim-telescope/telescope-file-browser.nvim",
+    requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+  }
+
+  use "dense-analysis/ale"
 end)
