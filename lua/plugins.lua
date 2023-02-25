@@ -45,5 +45,10 @@ return require("packer").startup(function(use)
     requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
   }
 
-  use "dense-analysis/ale"
+  use {
+    "dense-analysis/ale",
+    config = function()
+      vim.g.ale_lint_on_text_changed = "never"
+    end
+  }
 end)
